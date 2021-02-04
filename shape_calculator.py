@@ -25,10 +25,18 @@ class Rectangle:
             return ("*" * self.width + "\n") * self.height
         
     def get_amount_inside(self, shape):
-        if shape.width > self.width or shape.height > self.height:
-            return 0
-        else:
-            pass
+        big_width = self.width
+        big_height = self.height
+        
+        while not (big_width % shape.width == 0):
+            big_width -= 1
+        
+        while not (big_height % shape.height == 0):
+            big_height -= 1
+        
+        big_area = big_height * big_width
+        
+        return (big_area // shape.get_area())
 
 
 class Square:
