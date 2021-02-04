@@ -3,8 +3,7 @@ import shape_calculator
 from unittest import main
 
 
-rect = shape_calculator.Rectangle(5, 1)
-rect2 = shape_calculator.Rectangle(2, 2)
+# rect = shape_calculator.Rectangle(5, 1)
 # print(rect.get_area())
 # rect.set_width(3)
 # print(rect.get_perimeter())
@@ -17,9 +16,8 @@ rect2 = shape_calculator.Rectangle(2, 2)
 # print(sq.get_diagonal())
 # print(sq)
 
-print(rect.get_amount_inside(rect2))
 
 
 
 # Run unit tests automatically
-# main(module='test_module', exit=False)
+main(module='test_module', exit=False)

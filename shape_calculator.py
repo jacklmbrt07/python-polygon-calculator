@@ -37,7 +37,30 @@ class Rectangle:
         big_area = big_height * big_width
         
         return (big_area // shape.get_area())
+    
+    def __str__(self) -> str:
+        return f"Rectangle(width={self.width}, height={self.height})"
 
 
-class Square:
-    pass
+class Square(Rectangle):
+    def __init__(self, side) -> None:
+        self.side = side
+        super().__init__(side, side)
+        
+    def set_side(self, side):
+        self.side = side
+    
+    def set_width(self, width):
+        self.side = width
+    
+    def set_height(self, height):
+        self.side = height
+        
+    def get_picture(self):
+        if self.side > 50:
+            return "Too big for picture."
+        else:
+            return ("*" * self.side + "\n") * self.side
+    
+    def __str__(self) -> str:
+        return f"Square(side={self.side})"
